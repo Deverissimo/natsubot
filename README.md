@@ -1,0 +1,2 @@
+# natsubot
+Python Discord Bot
