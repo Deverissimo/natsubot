@@ -3,13 +3,11 @@ import idol_info
 import discord
 from discord.ext import commands
 import os
-
 import dotenv
 
 # Set this to the prefix you want for your bot.
 prefix = "$"
 client = commands.Bot(command_prefix=prefix)
-
 client.remove_command("help")
 
 
@@ -24,9 +22,9 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    #School Idol Project character wiki
+    #School Idol Project character information embed
+    
 
-    #honoka
     if message.content.startswith(prefix + 'honoka'):
         embed_var = discord.Embed(title=idol_info.idol[0][0],
                                   description="**Seiyuu**: Nitta Emi",
@@ -46,7 +44,6 @@ async def on_message(message):
         embed_var.set_thumbnail(url=idol_info.honoka[1])
         await message.channel.send(embed=embed_var)
 
-#kotori command
     if message.content.startswith(prefix + 'kotori'):
         embed_var = discord.Embed(title=idol_info.idol[0][1],
                                   description="**Seiyuu**: Uchida Aya",
@@ -66,7 +63,6 @@ async def on_message(message):
         embed_var.set_thumbnail(url=idol_info.kotori[1])
         await message.channel.send(embed=embed_var)
 
-#umi command
     if message.content.startswith(prefix + 'umi'):
         embed_var = discord.Embed(title=idol_info.idol[0][2],
                                   description="**Seiyuu**: Mimori Suzuko",
@@ -86,7 +82,6 @@ async def on_message(message):
         embed_var.set_thumbnail(url=idol_info.umi[1])
         await message.channel.send(embed=embed_var)
 
-#rin command
     if message.content.startswith(prefix + 'rin'):
         embed_var = discord.Embed(title=idol_info.idol[0][3],
                                   description="**Seiyuu**: Iida Riho",
@@ -106,7 +101,6 @@ async def on_message(message):
         embed_var.set_thumbnail(url=idol_info.rin[1])
         await message.channel.send(embed=embed_var)
 
-#hanayo command
     if message.content.startswith(prefix + 'hanayo'):
         embed_var = discord.Embed(title=idol_info.idol[0][4],
                                   description="**Seiyuu**: Kubo Yurika",
@@ -126,7 +120,6 @@ async def on_message(message):
         embed_var.set_thumbnail(url=idol_info.hanayo[1])
         await message.channel.send(embed=embed_var)
 
-#maki command
     if message.content.startswith(prefix + 'maki'):
         embed_var = discord.Embed(title=idol_info.idol[0][5],
                                   description="**Seiyuu**: Hori Eriko",
@@ -147,7 +140,6 @@ async def on_message(message):
         await message.channel.send(embed=embed_var)
 
 
-#nozomi command
     if message.content.startswith(prefix + 'nozomi'):
         embed_var = discord.Embed(title=idol_info.idol[0][6],
                                   description="**Seiyuu**: Kusuda Aina",
